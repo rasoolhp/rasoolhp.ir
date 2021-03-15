@@ -97,45 +97,45 @@
 <!-- END: Mobile Menu -->
 <!-- BEGIN: Top Menu -->
 <nav class="top-nav">
-  <ul>
+  <ul id="top-nav-menu">
     <li>
-      <a href="javascript:;" class="top-menu top-menu--active">
+      <a href="index.html" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="home"></i> </div>
         <div class="top-menu__title"> خونه رسول </div>
       </a>
     </li>
     <li>
-      <a href="javascript:;" class="top-menu">
+      <a href="vcard.html" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="briefcase"></i> </div>
         <div class="top-menu__title"> کارت ویزیت </div>
       </a>
     </li>
     <li>
-      <a href="javascript:;" class="top-menu">
+      <a href="abilities.html" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
         <div class="top-menu__title"> توانایی‌ها </div>
       </a>
     </li>
     <li>
-      <a href="javascript:;" class="top-menu">
+      <a href="collaboration.html" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="target"></i> </div>
         <div class="top-menu__title"> همکاری </div>
       </a>
     </li>
     <li>
-      <a href="javascript:;" class="top-menu">
+      <a href="resume.html" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="file-text"></i> </div>
         <div class="top-menu__title"> رزومه </div>
       </a>
     </li>
     <li>
-      <a href="javascript:;" class="top-menu">
+      <a href="courses.html" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="shopping-bag"></i> </div>
         <div class="top-menu__title"> دوره‌ها </div>
       </a>
     </li>
     <li>
-      <a href="javascript:;" class="top-menu">
+      <a href="english.html" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="globe"></i> </div>
         <div class="top-menu__title"> Rasool in English </div>
       </a>
@@ -148,6 +148,22 @@
   </ul>
 </nav>
 <!-- END: Top Menu -->
+
+<script>
+  // top-menu--active
+  loc_arr = String(document.location).split('/')
+  // console.log(loc_arr[loc_arr.length - 1]);
+  lis = document.getElementById('top-nav-menu').children
+  for (var i = 0; i < lis.length; i++) {
+    a_tag = lis[i].firstElementChild
+    a_arr = a_tag.href.split('/')
+    if (a_arr[a_arr.length - 1] == loc_arr[loc_arr.length - 1]) {
+      a_tag.className += ' top-menu--active'
+    } else if (loc_arr[loc_arr.length - 1] == "" && a_arr[a_arr.length - 1] == "index.html") {
+      a_tag.className += ' top-menu--active'
+    }
+  }
+</script>
 
   <!-- BEGIN: Content -->
   <div class="content">
