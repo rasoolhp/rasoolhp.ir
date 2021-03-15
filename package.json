@@ -1,0 +1,12 @@
+{
+  "name": "rasoolhp.ir",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rasoolhp/rasoolhp.ir",
+  "author": "rasoolhp <rasoolhp4@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0"
+  }
+}
