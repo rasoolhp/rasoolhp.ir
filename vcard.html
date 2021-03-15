@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+  @@include('./head.html')
+</head>
+
+<body class="app">
+
+  @@include('./menu.html')
+
+  <!-- BEGIN: Content -->
+  <div class="content">
+    <div class="intro-y flex items-center mt-8">
+      <h2 class="text-lg font-medium m-auto">
+        کارت ویزیت
+      </h2>
+    </div>
+    <!-- BEGIN: Profile Info -->
+    <div class="intro-y box px-5 pt-5 mt-5">
+      <div class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5">
+        <div class="flex flex-1 px-5 items-center justify-center lg:justify-start">
+          <div class="w-20 h-20 flex-none lg:w-32 lg:h-32 image-fit relative">
+            <img alt="RasoolHP" class="rounded-full" src="dist/images/rasools/rasoolod.jpg">
+          </div>
+          <div class="ml-5">
+            <div class="w-30 sm:whitespace-normal font-bold text-lg truncate">رسول حسین پور</div>
+            <div class="text-gray-600">توسعه دهنده وب اپ</div>
+          </div>
+        </div>
+        <div class="flex mt-6 lg:mt-0 items-start flex-1 flex-col text-gray-600 dark:text-gray-300 px-5 border-l border-r border-gray-200 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
+          <div class="truncate sm:whitespace-normal flex items-center"> <i data-feather="smartphone" class="w-4 h-4 mr-2"></i><a href="tel:+989387006190"> +98 938 7006 190 </a></div>
+          <div class="truncate sm:whitespace-normal flex items-center mt-5"> <i data-feather="phone" class="w-4 h-4 mr-2"></i><a href="https://wa.me/+989387006190"> +98 938 7006 190 </a> </div>
+          <div class="truncate sm:whitespace-normal flex items-center mt-5"> <i data-feather="send" class="w-4 h-4 mr-2"></i><a href="https://t.me/RasoolHP"> @rasoolhp </a> </div>
+          <div class="truncate sm:whitespace-normal flex items-center mt-5"> <i data-feather="globe" class="w-4 h-4 mr-2"></i><a href="https://rasoolhp.ir"> www.rasoolhp.ir </a> </div>
+          <div class="truncate sm:whitespace-normal flex items-center mt-5"> <i data-feather="mail" class="w-4 h-4 mr-2"></i><a href="mailto:rasoolhp4@gmail.com"> rasoolhp4@gmail.com </a></div>
+          <!-- <div class="truncate sm:whitespace-normal flex items-center mt-3"> <i data-feather="instagram" class="w-4 h-4 mr-2"></i> Instagram </div> -->
+          <!-- <div class="truncate sm:whitespace-normal flex items-center mt-3"> <i data-feather="twitter" class="w-4 h-4 mr-2"></i> Twitter </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- END: Profile Info -->
+  </div>
+  <!-- END: Content -->
+  <!-- BEGIN: JS Assets-->
+  <script src="dist/js/app.js"> </script>
+  @@include('./js.html')
+  <!-- END: JS Assets-->
+</body>
+
+</html>
