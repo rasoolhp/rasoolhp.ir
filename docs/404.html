@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="light">
+<html class="dark">
 
 <head>
   <title>404 | رسول حسین پور - RasoolHP</title>
@@ -20,6 +20,20 @@
 <!-- END: CSS Assets-->
 
 <!-- END: Default Head -->
+
+<script src="dist/js/cookies.js"></script>
+<script>
+  styleMode = document.getElementsByTagName("html")[0];
+
+  if (getCookie("style_mode") == "light") {
+    styleMode.className = 'light';
+  } else if (getCookie("style_mode") == "dark") {
+    styleMode.className = 'dark';
+  } else {
+    styleMode.className = 'light';
+    setCookieForever("style_mode", "light")
+  }
+</script>
 </head>
 
 <body class="app">
@@ -31,8 +45,8 @@
       </div>
       <div class="text-white mt-10 lg:mt-0">
         <div class="intro-x text-6xl font-medium">۴۰۴</div>
-        <div class="intro-x text-xl lg:text-3xl font-medium" dir="rtl">اوخ! این صفحه رو خرگوش خورده :)</div>
-        <div class="intro-x text-lg mt-3" dir="rtl">به هر حال این صفحه پیدا نشد!</div>
+        <div class="intro-x text-xl lg:text-3xl font-medium" dir="rtl">اوخ! این صفحه رو خرگوش خورد :)</div>
+        <div class="intro-x text-lg mt-3" dir="rtl">یعنی این صفحه پیدا نشد!</div>
         <a href="index.html">
           <button class="intro-x button button--lg border border-white dark:border-dark-5 dark:text-gray-300 mt-10">برگشت به خونه رسول</button>
         </a>

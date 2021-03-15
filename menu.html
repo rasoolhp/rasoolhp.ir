@@ -1,11 +1,11 @@
 <!-- BEGIN: Mobile Menu -->
 <div class="mobile-menu md:hidden">
   <div class="mobile-menu-bar">
-    <a href="404.html">
-      <img alt="rasoolhp" class="w-6" src="dist/images/logo.svg">
+    <a href="javascript:toggleStyleMode();" id='mobile-style-mode-link'>
+      <i data-feather="sun" id="mobile-style-mode-icon" class="w-6 h-6 text-white"></i>
     </a>
-    <a href="javascript:;" class="flex mr-auto">
-      <span class="xl:block text-white text-lg ml-3">رسول حسین پور</span>
+    <a href="javascript:;" class="flex m-auto">
+      <span class="xl:block text-white text-lg">رسول حسین پور</span>
     </a>
     <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
   </div>
@@ -43,7 +43,7 @@
     <li>
       <a href="javascript:;" class="menu">
         <div class="menu__icon"> <i data-feather="shopping-bag"></i> </div>
-        <div class="menu__title"> از رسول بخر </div>
+        <div class="menu__title"> دوره‌ها </div>
       </a>
     </li>
     <li>
@@ -91,13 +91,18 @@
     <li>
       <a href="javascript:;" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="shopping-bag"></i> </div>
-        <div class="top-menu__title"> از رسول بخر </div>
+        <div class="top-menu__title"> دوره‌ها </div>
       </a>
     </li>
     <li>
       <a href="javascript:;" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="globe"></i> </div>
         <div class="top-menu__title"> Rasool in English </div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:toggleStyleMode()" class="top-menu" id='desktop-style-mode-link'>
+        <div class="top-menu__icon"> <i data-feather="sun" id="desktop-style-mode-icon"></i> </div>
       </a>
     </li>
   </ul>

@@ -1,0 +1,31 @@
+<script>
+  var clicked = false;
+
+  function toggleStyleMode() {
+    if (!clicked) {
+      clicked = true;
+      document.getElementById("mobile-style-mode-link").removeAttribute('href');
+      document.getElementById("desktop-style-mode-link").removeAttribute('href');
+      // console.log('disabled!');
+      setTimeout(function() {
+        clicked = false;
+        document.getElementById("mobile-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        document.getElementById("desktop-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        // console.log('enabled.');
+      }, 100);
+    }
+
+    styleModeCookie = getCookie("style_mode")
+    // console.log('cookie:', styleModeCookie);
+    if (styleModeCookie == "light") {
+      styleMode.className = 'dark';
+      setCookieForever("style_mode", "dark")
+      // console.log('Dark Mode');
+    } else if (styleModeCookie == "dark") {
+      styleMode.className = 'light';
+      setCookieForever("style_mode", "light")
+      // console.log('Light Mode');
+    }
+    feather.replace()
+  }
+</script>

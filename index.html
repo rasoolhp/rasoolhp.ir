@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light">
+<html class="dark">
 
 <head>
   @@include('./head.html')
@@ -13,20 +13,24 @@
   <div class="content">
     <div class="grid grid-cols-12 gap-6 mt-5">
       <!-- BEGIN: FAQ Menu -->
-      <a class="intro-y col-span-12 lg:col-span-4 box py-10 border-2 border-theme-1 dark:border-theme-1">
-        <i data-feather="home" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
-        <div class="font-medium text-center text-base mt-3">خونه رسول</div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl">بله! شما اینجا هستید! پس به خونه‌ی من خوش اومدین :)</div>
+      <a href="404.html" class="intro-y col-span-12 lg:col-span-4 box py-10 border-2 border-theme-1 dark:border-theme-1">
+
+        <img alt="rasoolhp" src="dist/images/rasools/rasoolin.jpg" class="rounded-full w-12 h-12 mx-auto">
+
+        <!-- <img alt="rasoolhp" src="dist/images/logo.svg" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"> -->
+
+        <div class="font-medium text-center text-base mt-3" dir="rtl">سلام به شما :)</div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl"> به خونه‌ی من خوش اومدین :) </div>
       </a>
       <a href="javascript:;" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="briefcase" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> کارت ویزیت </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl"> کارت ویزیت ازم میخوای؟ دوره کاغذیش گذشته. پس برو اینجا </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl"> کارت ویزیت ازم می‌خواین؟ دوره کاغذیش گذشته. </div>
       </a>
       <a href="javascript:;" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="zap" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> توانایی‌ها </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl">خب من کارای مختلفی ازم برمیاد که میتونی بهم بسپری</div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl"> خب من کارای مختلفی ازم برمیاد که میتونین بهم بسپرین. </div>
       </a>
       <a href="javascript:;" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="target" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
@@ -36,12 +40,12 @@
       <a href="javascript:;" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="file-text" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> رزومه </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl"> می‌خواید استخدامم کنید؟ یا رزومم رو ببینید؟ </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl"> می‌خواین استخدامم کنین؟ رزومم رو ببینین. </div>
       </a>
       <a href="javascript:;" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="shopping-bag" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
-        <div class="font-medium text-center text-base mt-3"> از رسول بخر </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl"> ببین! آموزش ببین! اونم یه آموزش ارزشمند! تا ارزشمند تر شی! </div>
+        <div class="font-medium text-center text-base mt-3"> دوره‌ها </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="rtl"> ببین! آموزش ببین! اونم یه آموزش ارزشمند! تا ارزشمندتر شی! </div>
       </a>
       <a href="javascript:;" class="intro-y col-span-12 box py-10">
         <i data-feather="globe" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
@@ -53,7 +57,8 @@
   </div>
   <!-- END: Content -->
   <!-- BEGIN: JS Assets-->
-  <script src="dist/js/app.js"></script>
+  <script src="dist/js/app.js"> </script>
+  @@include('./js.html')
   <!-- END: JS Assets-->
 </body>
 

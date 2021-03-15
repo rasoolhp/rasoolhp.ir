@@ -14,3 +14,17 @@
 <!-- END: CSS Assets-->
 
 <!-- END: Default Head -->
+
+<script src="dist/js/cookies.js"></script>
+<script>
+  styleMode = document.getElementsByTagName("html")[0];
+
+  if (getCookie("style_mode") == "light") {
+    styleMode.className = 'light';
+  } else if (getCookie("style_mode") == "dark") {
+    styleMode.className = 'dark';
+  } else {
+    styleMode.className = 'light';
+    setCookieForever("style_mode", "light")
+  }
+</script>
