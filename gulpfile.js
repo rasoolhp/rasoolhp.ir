@@ -27,7 +27,7 @@ async function includeHTML() {
 
 // Copy assets
 async function copyAssets() {
-  gulp.src(['dist/**/*'], {
+  gulp.src(['dist/**/*', 'CNAME'], {
       base: './'
     })
     .pipe(gulp.dest(paths.scripts.dest));
