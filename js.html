@@ -20,10 +20,12 @@
     // console.log('cookie:', styleModeCookie);
     if (styleModeCookie == "light") {
       styleMode.className = 'dark';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#232a3b');
       setCookieForever("style_mode", "dark")
       // console.log('Dark Mode');
     } else if (styleModeCookie == "dark") {
       styleMode.className = 'light';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c3faa');
       setCookieForever("style_mode", "light")
       // console.log('Light Mode');
     }
