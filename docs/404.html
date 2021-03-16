@@ -61,6 +61,51 @@
   </div>
   <!-- BEGIN: JS Assets-->
   <script src="dist/js/app.js"></script>
+  <!-- dark and light mode switcher -->
+<script>
+  var clicked = false;
+
+  function toggleStyleMode() {
+    if (!clicked) {
+      clicked = true;
+      document.getElementById("mobile-style-mode-link").removeAttribute('href');
+      document.getElementById("desktop-style-mode-link").removeAttribute('href');
+      // console.log('disabled!');
+      setTimeout(function() {
+        clicked = false;
+        document.getElementById("mobile-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        document.getElementById("desktop-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        // console.log('enabled.');
+      }, 100);
+    }
+
+    styleModeCookie = getCookie("style_mode")
+    // console.log('cookie:', styleModeCookie);
+    if (styleModeCookie == "light") {
+      styleMode.className = 'dark';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#232a3b');
+      setCookieForever("style_mode", "dark")
+      // console.log('Dark Mode');
+    } else if (styleModeCookie == "dark") {
+      styleMode.className = 'light';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c3faa');
+      setCookieForever("style_mode", "light")
+      // console.log('Light Mode');
+    }
+    feather.replace()
+  }
+</script>
+
+<!-- google translate -->
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fa',
+      autoDisplay: false
+    });
+  }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <!-- END: JS Assets-->
 </body>
 
