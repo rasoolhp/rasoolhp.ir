@@ -47,9 +47,9 @@
       </a>
     </li>
     <li>
-      <a href="english.html" class="menu">
+      <a href="?#googtrans(en)" class="menu">
         <div class="menu__icon"> <i data-feather="globe"></i> </div>
-        <div class="menu__title"> Rasool in English </div>
+        <div class="menu__title"> Translate </div>
       </a>
     </li>
   </ul>
@@ -95,9 +95,9 @@
       </a>
     </li>
     <li>
-      <a href="english.html" class="top-menu">
+      <a href="?#googtrans(en)" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="globe"></i> </div>
-        <div class="top-menu__title"> Rasool in English </div>
+        <div class="top-menu__title"> Translate </div>
       </a>
     </li>
     <li>
@@ -109,17 +109,18 @@
 </nav>
 <!-- END: Top Menu -->
 
+<!-- select active menu for desktop -->
 <script>
   // top-menu--active
   loc_arr = String(document.location).split('/')
-  // console.log(loc_arr[loc_arr.length - 1]);
+  las_loc = loc_arr[loc_arr.length - 1].split('?')[0]
   lis = document.getElementById('top-nav-menu').children
   for (var i = 0; i < lis.length; i++) {
     a_tag = lis[i].firstElementChild
     a_arr = a_tag.href.split('/')
-    if (a_arr[a_arr.length - 1] == loc_arr[loc_arr.length - 1]) {
+    if (a_arr[a_arr.length - 1] == las_loc) {
       a_tag.className += ' top-menu--active'
-    } else if (loc_arr[loc_arr.length - 1] == "" && a_arr[a_arr.length - 1] == "index.html") {
+    } else if (las_loc == "" && a_arr[a_arr.length - 1] == "index.html") {
       a_tag.className += ' top-menu--active'
     }
   }
