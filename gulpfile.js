@@ -80,7 +80,8 @@ gulp.task('afterLocalize', function() {
     '!docs/en',
     '!docs/fa',
     '!docs/CNAME',
-    '!docs/index.html'
+    '!docs/index.html',
+    '!docs/404.html'
   ]);
 });
 
