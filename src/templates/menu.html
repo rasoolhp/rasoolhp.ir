@@ -112,13 +112,10 @@
 <!-- select active menu for desktop -->
 <script>
   // top-menu--active
+  // console.log(document.location);
   // console.log(document.location.protocol);
   loc_arr = String(document.location).split('/')
-  if (document.location.protocol == 'file:') {
-    las_loc = loc_arr[loc_arr.length - 2]
-  } else {
-    las_loc = loc_arr[loc_arr.length - 1]
-  }
+  las_loc = loc_arr[loc_arr.length - 2]
   // console.log('las_loc', las_loc);
   lis = document.getElementById('top-nav-menu').children
   for (var i = 0; i < lis.length; i++) {
