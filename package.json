@@ -6,6 +6,7 @@
   "author": "rasoolhp <rasoolhp4@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.26.14",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-file-include": "^2.3.0",

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+  <!-- BEGIN: Default Head -->
+
+<meta charset="utf-8">
+<link href="../dist/images/logo.svg" rel="shortcut icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1c3faa" />
+<meta name="description" content="سایت رسول حسین پور">
+<meta name="keywords" content="رسول حسین پور">
+<meta name="author" content="رسول حسین پور">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="../dist/images/rasools/rasoolin.jpg" />
+<title>${{ head.title }}$</title>
+
+
+<!-- BEGIN: CSS Assets-->
+<link rel="stylesheet" href="../dist/css/app.css" />
+<!-- END: CSS Assets-->
+
+<!-- END: Default Head -->
+
+<!-- Initial set style mode -->
+<script src="../dist/js/cookies.js"></script>
+<script>
+  styleMode = document.getElementsByTagName("html")[0];
+
+  if (getCookie("style_mode") == "light") {
+    styleMode.className = 'light';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c3faa');
+  } else if (getCookie("style_mode") == "dark") {
+    styleMode.className = 'dark';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#232a3b');
+  } else {
+    styleMode.className = 'light';
+    setCookieForever("style_mode", "light")
+  }
+</script>
+</head>
+
+<body class="app">
+
+  <!-- BEGIN: Mobile Menu -->
+<div class="mobile-menu md:hidden">
+  <div class="mobile-menu-bar">
+    <a href="javascript:toggleStyleMode();" id='mobile-style-mode-link'>
+      <i data-feather="sun" id="mobile-style-mode-icon" class="w-6 h-6 text-white"></i>
+    </a>
+    <a href="../home" class="flex m-auto">
+      <span class="xl:block text-white text-lg">رسول حسین پور</span>
+    </a>
+    <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+  </div>
+  <ul class="border-t border-theme-24 py-5 hidden">
+    <li>
+      <a href="../home" class="menu">
+        <div class="menu__icon"> <i data-feather="home"></i> </div>
+        <div class="menu__title"> خونه رسول </div>
+      </a>
+    </li>
+    <li>
+      <a href="../vcard" class="menu">
+        <div class="menu__icon"> <i data-feather="briefcase"></i> </div>
+        <div class="menu__title"> کارت ویزیت </div>
+      </a>
+    </li>
+    <li>
+      <a href="abilities.html" class="menu">
+        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+        <div class="menu__title"> توانایی‌ها </div>
+      </a>
+    </li>
+    <li>
+      <a href="collaboration.html" class="menu">
+        <div class="menu__icon"> <i data-feather="target"></i> </div>
+        <div class="menu__title"> همکاری </div>
+      </a>
+    </li>
+    <li>
+      <a href="resume.html" class="menu">
+        <div class="menu__icon"> <i data-feather="file-text"></i> </div>
+        <div class="menu__title"> رزومه </div>
+      </a>
+    </li>
+    <li>
+      <a href="courses.html" class="menu">
+        <div class="menu__icon"> <i data-feather="shopping-bag"></i> </div>
+        <div class="menu__title"> دوره‌ها </div>
+      </a>
+    </li>
+    <li>
+      <a href="?#googtrans(en)" class="menu">
+        <div class="menu__icon"> <i data-feather="globe"></i> </div>
+        <div class="menu__title"> Translate </div>
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- END: Mobile Menu -->
+<!-- BEGIN: Top Menu -->
+<nav class="top-nav">
+  <ul id="top-nav-menu">
+    <li>
+      <a href="../home" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="home"></i> </div>
+        <div class="top-menu__title"> خونه رسول </div>
+      </a>
+    </li>
+    <li>
+      <a href="../vcard" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="briefcase"></i> </div>
+        <div class="top-menu__title"> کارت ویزیت </div>
+      </a>
+    </li>
+    <li>
+      <a href="abilities.html" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+        <div class="top-menu__title"> توانایی‌ها </div>
+      </a>
+    </li>
+    <li>
+      <a href="collaboration.html" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="target"></i> </div>
+        <div class="top-menu__title"> همکاری </div>
+      </a>
+    </li>
+    <li>
+      <a href="resume.html" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="file-text"></i> </div>
+        <div class="top-menu__title"> رزومه </div>
+      </a>
+    </li>
+    <li>
+      <a href="courses.html" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="shopping-bag"></i> </div>
+        <div class="top-menu__title"> دوره‌ها </div>
+      </a>
+    </li>
+    <li>
+      <a href="?#googtrans(en)" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="globe"></i> </div>
+        <div class="top-menu__title"> Translate </div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:toggleStyleMode()" class="top-menu" id='desktop-style-mode-link'>
+        <div class="top-menu__icon"> <i data-feather="sun" id="desktop-style-mode-icon"></i> </div>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- END: Top Menu -->
+
+<!-- select active menu for desktop -->
+<script>
+  // top-menu--active
+  // console.log(document.location.protocol);
+  loc_arr = String(document.location).split('/')
+  if (document.location.protocol == 'file:') {
+    las_loc = loc_arr[loc_arr.length - 2]
+  } else {
+    las_loc = loc_arr[loc_arr.length - 1]
+  }
+  // console.log('las_loc', las_loc);
+  lis = document.getElementById('top-nav-menu').children
+  for (var i = 0; i < lis.length; i++) {
+    a_tag = lis[i].firstElementChild
+    a_arr = a_tag.href.split('/')
+    // console.log('menu link', a_arr[a_arr.length - 1]);
+    if (a_arr[a_arr.length - 1] == las_loc) {
+      a_tag.className += ' top-menu--active'
+    } else if (las_loc == "" && a_arr[a_arr.length - 1] == "../home") {
+      a_tag.className += ' top-menu--active'
+    }
+  }
+</script>
+
+  <!-- BEGIN: Content -->
+  <div class="content">
+
+    <!-- BEGIN: Breadcrumb -->
+    <div class="-intro-x breadcrumb breadcrumb--dark justify-center mt-5 md:hidden"> <a href="index.html" class="">خونه</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a class="breadcrumb--active">کارت ویزیت</a> </div>
+    <!-- END: Breadcrumb -->
+
+    <!-- BEGIN: Profile Info -->
+    <div class="intro-y box px-5 pt-5 mt-5">
+      <div class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5">
+        <div class="flex flex-1 px-5 items-center justify-center lg:justify-start">
+          <div class="w-20 h-20 flex-none lg:w-32 lg:h-32 image-fit relative">
+            <img alt="RasoolHP" class="rounded-full" src="../dist/images/rasools/rasoolod.jpg">
+          </div>
+          <div class="ml-5">
+            <div class="w-30 sm:whitespace-normal font-bold text-lg truncate">رسول حسین پور</div>
+            <div class="text-gray-600">توسعه دهنده وب اپ</div>
+          </div>
+        </div>
+        <div class="flex mt-6 lg:mt-0 items-start flex-1 flex-col text-gray-600 dark:text-gray-300 px-5 border-l border-r border-gray-200 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
+          <div class="truncate sm:whitespace-normal flex items-center"> <i data-feather="smartphone" class="w-4 h-4 mr-2"></i><a href="tel:+989387006190"> +98 938 7006 190 </a></div>
+          <div class="truncate sm:whitespace-normal flex items-center mt-5"> <i data-feather="phone" class="w-4 h-4 mr-2"></i><a href="https://wa.me/+989387006190"> +98 938 7006 190 </a> </div>
+          <div class="truncate sm:whitespace-normal flex items-center mt-5"> <i data-feather="send" class="w-4 h-4 mr-2"></i><a href="https://t.me/RasoolHP"> @rasoolhp </a> </div>
+          <div class="truncate sm:whitespace-normal flex items-center mt-5"> <i data-feather="globe" class="w-4 h-4 mr-2"></i><a href="https://rasoolhp.ir"> www.rasoolhp.ir </a> </div>
+          <div class="truncate sm:whitespace-normal flex items-center mt-5"> <i data-feather="mail" class="w-4 h-4 mr-2"></i><a href="mailto:rasoolhp4@gmail.com"> rasoolhp4@gmail.com </a></div>
+          <!-- <div class="truncate sm:whitespace-normal flex items-center mt-3"> <i data-feather="instagram" class="w-4 h-4 mr-2"></i> Instagram </div> -->
+          <!-- <div class="truncate sm:whitespace-normal flex items-center mt-3"> <i data-feather="twitter" class="w-4 h-4 mr-2"></i> Twitter </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- END: Profile Info -->
+  </div>
+  <!-- END: Content -->
+  <!-- BEGIN: JS Assets-->
+  <script src="../dist/js/app.js"> </script>
+  <!-- dark and light mode switcher -->
+<script>
+  var clicked = false;
+
+  function toggleStyleMode() {
+    if (!clicked) {
+      clicked = true;
+      document.getElementById("mobile-style-mode-link").removeAttribute('href');
+      document.getElementById("desktop-style-mode-link").removeAttribute('href');
+      // console.log('disabled!');
+      setTimeout(function() {
+        clicked = false;
+        document.getElementById("mobile-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        document.getElementById("desktop-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        // console.log('enabled.');
+      }, 100);
+    }
+
+    styleModeCookie = getCookie("style_mode")
+    // console.log('cookie:', styleModeCookie);
+    if (styleModeCookie == "light") {
+      styleMode.className = 'dark';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#232a3b');
+      setCookieForever("style_mode", "dark")
+      // console.log('Dark Mode');
+    } else if (styleModeCookie == "dark") {
+      styleMode.className = 'light';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c3faa');
+      setCookieForever("style_mode", "light")
+      // console.log('Light Mode');
+    }
+    feather.replace()
+  }
+</script>
+
+<!-- google translate -->
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fa',
+      autoDisplay: false
+    });
+  }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- END: JS Assets-->
+</body>
+
+</html>

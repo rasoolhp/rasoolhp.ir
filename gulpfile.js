@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const del = require('del');
 const fileinclude = require('gulp-file-include');
 const i18n = require('gulp-html-i18n');
+const browserSync = require('browser-sync').create();
 
 const {
   watch,
@@ -78,11 +79,19 @@ gulp.task('afterLocalize', function() {
   ]);
 });
 
-
 // Watch source code changes and run task series
 gulp.task('watch', function() {
   return watch(["src/**/*"], series('clean', 'includeHTML', 'localize', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'afterLocalize'));
 });
 
+// as default run browserSync
+browserSync.init({
+  server: {
+    baseDir: "./docs/"
+  },
+  open: false,
+  port: 80
 
-gulp.task('default', series('clean', 'includeHTML', 'localize', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'afterLocalize', 'watch'));
+});
+
+gulp.task('default', series('clean', 'includeHTML', 'localize', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'watch', ));
