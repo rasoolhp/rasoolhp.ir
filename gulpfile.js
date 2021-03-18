@@ -18,7 +18,8 @@ const paths = {
 
 const includeSrc = ['./src/**/*.html',
   '!./src/templates/**/*',
-  '!./src/languages/**/*'
+  '!./src/languages/**/*',
+  '!./src/index/**/*',
 ]
 
 // Clean dest
@@ -26,24 +27,24 @@ gulp.task('clean', function() {
   return del(['docs']);
 });
 
-// Copy english assets to dest
-gulp.task('copyEnAssets', function() {
-  return gulp.src(['./src/dist/**/*'], {
+// Copy assets to dest
+gulp.task('copyAssets', function() {
+  gulp.src(['./src/dist/**/*'], {
       base: './src/'
     })
     .pipe(gulp.dest(paths.scripts.dest + '/en'));
-});
 
-// Copy farai assets to dest
-gulp.task('copyFaAssets', function() {
-  return gulp.src(['./src/dist/**/*'], {
+  gulp.src(['./src/dist/**/*'], {
       base: './src/'
     })
     .pipe(gulp.dest(paths.scripts.dest + '/fa'));
-});
 
-// Copy CNAME
-gulp.task('copyCNAME', function() {
+  gulp.src(['./src/index/*.html'])
+    .pipe(gulp.dest(paths.scripts.dest + '/en'));
+
+  gulp.src(['./src/index/*.html'])
+    .pipe(gulp.dest(paths.scripts.dest + '/fa'));
+
   return gulp.src(['./src/CNAME'])
     .pipe(gulp.dest(paths.scripts.dest));
 });
@@ -81,7 +82,7 @@ gulp.task('afterLocalize', function() {
 
 // Watch source code changes and run task series
 gulp.task('watch', function() {
-  return watch(["src/**/*"], series('clean', 'includeHTML', 'localize', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'afterLocalize'));
+  return watch(["src/**/*"], series('clean', 'includeHTML', 'localize', 'copyAssets', 'afterLocalize'));
 });
 
 // as default run browserSync
@@ -94,4 +95,4 @@ browserSync.init({
 
 });
 
-gulp.task('default', series('clean', 'includeHTML', 'localize', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'watch', ));
+gulp.task('default', series('clean', 'includeHTML', 'localize', 'copyAssets', 'afterLocalize', 'watch', ));
