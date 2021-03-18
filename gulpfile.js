@@ -10,51 +10,46 @@ const {
 
 const paths = {
   scripts: {
-    src: './',
-    dest: './docs/'
+    src: 'src',
+    dest: 'docs'
   }
 };
 
-const src = ['*.html',
-  '!head.html', // ignore
-  '!menu.html', // ignore
-  '!js.html', // ignore
+const includeSrc = ['./src/**/*.html',
+  '!./src/templates/**/*',
+  '!./src/languages/**/*'
 ]
 
 // Clean dest
 gulp.task('clean', function() {
-  return del([
-    'docs/**/*'
-  ]);
+  return del(['docs']);
 });
 
 // Copy english assets to dest
 gulp.task('copyEnAssets', function() {
-  return gulp.src(['dist/**/*'], {
-      base: './'
+  return gulp.src(['./src/dist/**/*'], {
+      base: './src/'
     })
     .pipe(gulp.dest(paths.scripts.dest + '/en'));
 });
 
 // Copy farai assets to dest
 gulp.task('copyFaAssets', function() {
-  return gulp.src(['dist/**/*'], {
-      base: './'
+  return gulp.src(['./src/dist/**/*'], {
+      base: './src/'
     })
     .pipe(gulp.dest(paths.scripts.dest + '/fa'));
 });
 
 // Copy CNAME
 gulp.task('copyCNAME', function() {
-  return gulp.src(['CNAME'], {
-      base: './'
-    })
+  return gulp.src(['./src/CNAME'])
     .pipe(gulp.dest(paths.scripts.dest));
 });
 
 // Build HTML files into dest
 gulp.task('includeHTML', function() {
-  return gulp.src(src)
+  return gulp.src(includeSrc)
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
@@ -64,9 +59,9 @@ gulp.task('includeHTML', function() {
 
 // Localize
 gulp.task('localize', function() {
-  return gulp.src("docs/*.html")
+  return gulp.src("docs/**/*.html")
     .pipe(i18n({
-      langDir: './lang',
+      langDir: './src/languages',
       createLangDirs: true,
       trace: true
     }))
@@ -76,15 +71,18 @@ gulp.task('localize', function() {
 // After localize
 gulp.task('afterLocalize', function() {
   return del([
-    'docs/*.html'
+    'docs/**',
+    '!docs/en',
+    '!docs/fa',
+    '!docs/CNAME'
   ]);
 });
 
 
 // Watch source code changes and run task series
 gulp.task('watch', function() {
-  return watch(["*.html", "dist/**/*", "lang/**/*"], series('clean', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'includeHTML', 'localize', 'afterLocalize'));
+  return watch(["src/**/*"], series('clean', 'includeHTML', 'localize', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'afterLocalize'));
 });
 
 
-gulp.task('default', series('clean', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'includeHTML', 'localize', 'afterLocalize', 'watch'));
+gulp.task('default', series('clean', 'includeHTML', 'localize', 'copyEnAssets', 'copyFaAssets', 'copyCNAME', 'afterLocalize', 'watch'));

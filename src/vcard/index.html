@@ -2,12 +2,12 @@
 <html class="dark">
 
 <head>
-  @@include('./head.html')
+  @@include('../templates/head.html')
 </head>
 
 <body class="app">
 
-  @@include('./menu.html')
+  @@include('../templates/menu.html')
 
   <!-- BEGIN: Content -->
   <div class="content">
@@ -21,7 +21,7 @@
       <div class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5">
         <div class="flex flex-1 px-5 items-center justify-center lg:justify-start">
           <div class="w-20 h-20 flex-none lg:w-32 lg:h-32 image-fit relative">
-            <img alt="RasoolHP" class="rounded-full" src="dist/images/rasools/rasoolod.jpg">
+            <img alt="RasoolHP" class="rounded-full" src="../dist/images/rasools/rasoolod.jpg">
           </div>
           <div class="ml-5">
             <div class="w-30 sm:whitespace-normal font-bold text-lg truncate">رسول حسین پور</div>
@@ -43,8 +43,8 @@
   </div>
   <!-- END: Content -->
   <!-- BEGIN: JS Assets-->
-  <script src="dist/js/app.js"> </script>
-  @@include('./js.html')
+  <script src="../dist/js/app.js"> </script>
+  @@include('../templates/js.html')
   <!-- END: JS Assets-->
 </body>
 

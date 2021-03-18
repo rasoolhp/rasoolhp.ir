@@ -2,27 +2,27 @@
 <html class="dark">
 
 <head>
-  @@include('./head.html')
+  @@include('../templates/head.html')
 </head>
 
 <body class="app">
 
-  @@include('./menu.html')
+  @@include('../templates/menu.html')
 
   <!-- BEGIN: Content -->
   <div class="content">
     <div class="grid grid-cols-12 gap-6 mt-5">
       <!-- BEGIN: FAQ Menu -->
-      <a href="404.html" class="intro-y col-span-12 lg:col-span-4 box py-10 border-2 border-theme-1 dark:border-theme-1">
+      <a href="../404" class="intro-y col-span-12 lg:col-span-4 box py-10 border-2 border-theme-1 dark:border-theme-1">
 
-        <img alt="rasoolhp" src="dist/images/rasools/rasoolin.jpg" class="rounded-full w-12 h-12 mx-auto">
+        <img alt="rasoolhp" src="../dist/images/rasools/rasoolin.jpg" class="rounded-full w-12 h-12 mx-auto">
 
-        <!-- <img alt="rasoolhp" src="dist/images/logo.svg" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"> -->
+        <!-- <img alt="rasoolhp" src="../dist/images/logo.svg" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"> -->
 
         <div class="font-medium text-center text-base mt-3" dir="auto">سلام به شما :)</div>
         <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> به خونه‌ی من خوش اومدین :) </div>
       </a>
-      <a href="vcard.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
+      <a href="../vcard" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="briefcase" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> کارت ویزیت </div>
         <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> کارت ویزیت ازم می‌خواین؟ دوره کاغذیش گذشته. </div>
@@ -57,8 +57,8 @@
   </div>
   <!-- END: Content -->
   <!-- BEGIN: JS Assets-->
-  <script src="dist/js/app.js"> </script>
-  @@include('./js.html')
+  <script src="../dist/js/app.js"> </script>
+  @@include('../templates/js.html')
   <!-- END: JS Assets-->
 </body>
 

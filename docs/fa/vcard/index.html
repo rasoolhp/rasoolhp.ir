@@ -5,24 +5,25 @@
   <!-- BEGIN: Default Head -->
 
 <meta charset="utf-8">
-<link href="dist/images/logo.svg" rel="shortcut icon">
+<link href="../dist/images/logo.svg" rel="shortcut icon">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1c3faa" />
 <meta name="description" content="سایت رسول حسین پور">
 <meta name="keywords" content="رسول حسین پور">
 <meta name="author" content="رسول حسین پور">
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="dist/images/rasools/rasoolin.jpg" />
-<title>رسول حسین پور - RasoolHP</title>
+<meta name="twitter:image" content="../dist/images/rasools/rasoolin.jpg" />
+<title>رسول حسین پور</title>
+
 
 <!-- BEGIN: CSS Assets-->
-<link rel="stylesheet" href="dist/css/app.css" />
+<link rel="stylesheet" href="../dist/css/app.css" />
 <!-- END: CSS Assets-->
 
 <!-- END: Default Head -->
 
 <!-- Initial set style mode -->
-<script src="dist/js/cookies.js"></script>
+<script src="../dist/js/cookies.js"></script>
 <script>
   styleMode = document.getElementsByTagName("html")[0];
 
@@ -40,7 +41,7 @@
 </head>
 
 <body class="app">
-<!-- trace:docs/vcard.html -->
+<!-- trace:docs/vcard/index.html -->
 
   <!-- BEGIN: Mobile Menu -->
 <div class="mobile-menu md:hidden">
@@ -48,20 +49,20 @@
     <a href="javascript:toggleStyleMode();" id='mobile-style-mode-link'>
       <i data-feather="sun" id="mobile-style-mode-icon" class="w-6 h-6 text-white"></i>
     </a>
-    <a href="index.html" class="flex m-auto">
+    <a href="../home" class="flex m-auto">
       <span class="xl:block text-white text-lg">رسول حسین پور</span>
     </a>
     <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
   </div>
   <ul class="border-t border-theme-24 py-5 hidden">
     <li>
-      <a href="index.html" class="menu">
+      <a href="../home" class="menu">
         <div class="menu__icon"> <i data-feather="home"></i> </div>
         <div class="menu__title"> خونه رسول </div>
       </a>
     </li>
     <li>
-      <a href="vcard.html" class="menu">
+      <a href="../vcard" class="menu">
         <div class="menu__icon"> <i data-feather="briefcase"></i> </div>
         <div class="menu__title"> کارت ویزیت </div>
       </a>
@@ -103,13 +104,13 @@
 <nav class="top-nav">
   <ul id="top-nav-menu">
     <li>
-      <a href="index.html" class="top-menu">
+      <a href="../home" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="home"></i> </div>
         <div class="top-menu__title"> خونه رسول </div>
       </a>
     </li>
     <li>
-      <a href="vcard.html" class="top-menu">
+      <a href="../vcard" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="briefcase"></i> </div>
         <div class="top-menu__title"> کارت ویزیت </div>
       </a>
@@ -156,15 +157,22 @@
 <!-- select active menu for desktop -->
 <script>
   // top-menu--active
+  // console.log(document.location.protocol);
   loc_arr = String(document.location).split('/')
-  las_loc = loc_arr[loc_arr.length - 1].split('?')[0]
+  if (document.location.protocol == 'file:') {
+    las_loc = loc_arr[loc_arr.length - 2]
+  } else {
+    las_loc = loc_arr[loc_arr.length - 1]
+  }
+  // console.log('las_loc', las_loc);
   lis = document.getElementById('top-nav-menu').children
   for (var i = 0; i < lis.length; i++) {
     a_tag = lis[i].firstElementChild
     a_arr = a_tag.href.split('/')
+    // console.log('menu link', a_arr[a_arr.length - 1]);
     if (a_arr[a_arr.length - 1] == las_loc) {
       a_tag.className += ' top-menu--active'
-    } else if (las_loc == "" && a_arr[a_arr.length - 1] == "index.html") {
+    } else if (las_loc == "" && a_arr[a_arr.length - 1] == "../home") {
       a_tag.className += ' top-menu--active'
     }
   }
@@ -182,7 +190,7 @@
       <div class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5">
         <div class="flex flex-1 px-5 items-center justify-center lg:justify-start">
           <div class="w-20 h-20 flex-none lg:w-32 lg:h-32 image-fit relative">
-            <img alt="RasoolHP" class="rounded-full" src="dist/images/rasools/rasoolod.jpg">
+            <img alt="RasoolHP" class="rounded-full" src="../dist/images/rasools/rasoolod.jpg">
           </div>
           <div class="ml-5">
             <div class="w-30 sm:whitespace-normal font-bold text-lg truncate">رسول حسین پور</div>
@@ -204,7 +212,7 @@
   </div>
   <!-- END: Content -->
   <!-- BEGIN: JS Assets-->
-  <script src="dist/js/app.js"> </script>
+  <script src="../dist/js/app.js"> </script>
   <!-- dark and light mode switcher -->
 <script>
   var clicked = false;

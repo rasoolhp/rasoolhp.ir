@@ -1,3 +1,0 @@
-define({
-  pageTitle: 'title'
-});
