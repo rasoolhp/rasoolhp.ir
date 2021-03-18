@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const del = require('del');
 const fileinclude = require('gulp-file-include');
 const {
   watch,
@@ -12,8 +13,23 @@ const paths = {
   }
 };
 
-// Build HTML files
-async function includeHTML() {
+// Clean dest
+gulp.task('clean', function() {
+  return del([
+    'docs/**/*'
+  ]);
+});
+
+// Copy assets to dest
+gulp.task('copyAssets', function() {
+  return gulp.src(['dist/**/*', 'CNAME'], {
+      base: './'
+    })
+    .pipe(gulp.dest(paths.scripts.dest));
+});
+
+// Build HTML files into dest
+gulp.task('includeHTML', function() {
   return gulp.src([
       '*.html',
       '!head.html', // ignore
@@ -25,30 +41,12 @@ async function includeHTML() {
       basepath: '@file'
     }))
     .pipe(gulp.dest(paths.scripts.dest));
-}
+});
 
-// Copy assets
-async function copyAssets() {
-  gulp.src(['dist/**/*', 'CNAME'], {
-      base: './'
-    })
-    .pipe(gulp.dest(paths.scripts.dest));
-}
-
-// Build HTML files and Copy assets
-async function buildAndReload() {
-  // NOTE: If you want, You can add await before these functions.
-  includeHTML();
-  copyAssets();
-  // TODO: add live refresh server
-}
+// watch source code changes and run task series
+gulp.task('watch', function() {
+  return watch(["*.html", "dist/**/*"], series('clean', 'copyAssets', 'includeHTML'));
+});
 
 
-exports.includeHTML = includeHTML;
-
-exports.default = async function() {
-  // Build and reload at the first time
-  buildAndReload();
-  // Watch task
-  watch(["*.html", "dist/**/*"], series(buildAndReload));
-};
+gulp.task('default', series('clean', 'copyAssets', 'includeHTML', 'watch'));
