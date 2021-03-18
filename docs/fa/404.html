@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html class="dark">
+
+<head>
+  <title>404 | رسول حسین پور - RasoolHP</title>
+  <!-- BEGIN: Default Head -->
+
+<meta charset="utf-8">
+<link href="dist/images/logo.svg" rel="shortcut icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1c3faa" />
+<meta name="description" content="سایت رسول حسین پور">
+<meta name="keywords" content="رسول حسین پور">
+<meta name="author" content="رسول حسین پور">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="dist/images/rasools/rasoolin.jpg" />
+<title>رسول حسین پور - RasoolHP</title>
+
+<!-- BEGIN: CSS Assets-->
+<link rel="stylesheet" href="dist/css/app.css" />
+<!-- END: CSS Assets-->
+
+<!-- END: Default Head -->
+
+<!-- Initial set style mode -->
+<script src="dist/js/cookies.js"></script>
+<script>
+  styleMode = document.getElementsByTagName("html")[0];
+
+  if (getCookie("style_mode") == "light") {
+    styleMode.className = 'light';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c3faa');
+  } else if (getCookie("style_mode") == "dark") {
+    styleMode.className = 'dark';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#232a3b');
+  } else {
+    styleMode.className = 'light';
+    setCookieForever("style_mode", "light")
+  }
+</script>
+</head>
+
+<body class="app">
+<!-- trace:docs/404.html -->
+  <div class="container">
+    <!-- BEGIN: Error Page -->
+    <div class="error-page flex flex-col lg:flex-row items-center justify-center h-screen text-center lg:text-left">
+      <div class="-intro-x lg:mr-20">
+        <img alt="Midone Tailwind HTML Admin Template" class="h-48 lg:h-auto" src="dist/images/error-illustration.svg">
+      </div>
+      <div class="text-white mt-10 lg:mt-0">
+        <div class="intro-x text-6xl font-medium">۴۰۴</div>
+        <div class="intro-x text-xl lg:text-3xl font-medium" dir="auto">این صفحه پیدا نشد!</div>
+        <div class="intro-x text-lg mt-3" dir="auto">شاید در دست طراحیه :)</div>
+        <a href="index.html">
+          <button class="intro-x button button--lg border border-white dark:border-dark-5 dark:text-gray-300 mt-10">برگشت به خونه رسول</button>
+        </a>
+      </div>
+    </div>
+    <!-- END: Error Page -->
+  </div>
+  <!-- BEGIN: JS Assets-->
+  <script src="dist/js/app.js"></script>
+  <!-- dark and light mode switcher -->
+<script>
+  var clicked = false;
+
+  function toggleStyleMode() {
+    if (!clicked) {
+      clicked = true;
+      document.getElementById("mobile-style-mode-link").removeAttribute('href');
+      document.getElementById("desktop-style-mode-link").removeAttribute('href');
+      // console.log('disabled!');
+      setTimeout(function() {
+        clicked = false;
+        document.getElementById("mobile-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        document.getElementById("desktop-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        // console.log('enabled.');
+      }, 100);
+    }
+
+    styleModeCookie = getCookie("style_mode")
+    // console.log('cookie:', styleModeCookie);
+    if (styleModeCookie == "light") {
+      styleMode.className = 'dark';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#232a3b');
+      setCookieForever("style_mode", "dark")
+      // console.log('Dark Mode');
+    } else if (styleModeCookie == "dark") {
+      styleMode.className = 'light';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c3faa');
+      setCookieForever("style_mode", "light")
+      // console.log('Light Mode');
+    }
+    feather.replace()
+  }
+</script>
+
+<!-- google translate -->
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fa',
+      autoDisplay: false
+    });
+  }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- END: JS Assets-->
+</body>
+
+</html>
