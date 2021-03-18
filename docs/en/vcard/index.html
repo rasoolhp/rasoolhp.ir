@@ -92,9 +92,9 @@
       </a>
     </li>
     <li>
-      <a href="?#googtrans(en)" class="menu">
+      <a href="javascript:langSwitcher()" class="menu">
         <div class="menu__icon"> <i data-feather="globe"></i> </div>
-        <div class="menu__title"> Translate </div>
+        <div class="menu__title"> فارسی </div>
       </a>
     </li>
   </ul>
@@ -140,9 +140,9 @@
       </a>
     </li>
     <li>
-      <a href="?#googtrans(en)" class="top-menu">
+      <a href="javascript:langSwitcher()" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="globe"></i> </div>
-        <div class="top-menu__title"> Translate </div>
+        <div class="top-menu__title"> فارسی </div>
       </a>
     </li>
     <li>
@@ -171,6 +171,22 @@
       a_tag.className += ' top-menu--active'
     } else if (las_loc == "" && a_arr[a_arr.length - 1] == "../home") {
       a_tag.className += ' top-menu--active'
+    }
+  }
+</script>
+
+
+<!-- langSwitcher -->
+<script>
+  function langSwitcher() {
+    thisPageLoc = String(document.location)
+    // console.log(thisPageLoc);
+    if (thisPageLoc.includes("/en/")) {
+      // console.log('en', thisPageLoc.replace("/en/", "/fa/"));
+      window.location.replace(thisPageLoc.replace("/en/", "/fa/"))
+    } else if (thisPageLoc.includes("/fa/")) {
+      // console.log('fa', thisPageLoc.replace("/fa/", "/en/"));
+      window.location.replace(thisPageLoc.replace("/fa/", "/en/"))
     }
   }
 </script>
