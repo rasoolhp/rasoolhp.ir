@@ -19,38 +19,38 @@
 
         <!-- <img alt="rasoolhp" src="../dist/images/logo.svg" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"> -->
 
-        <div class="font-medium text-center text-base mt-3" dir="auto">سلام به شما :)</div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> به خونه‌ی من خوش اومدین :) </div>
+        <div class="font-medium text-center text-base mt-3" dir="auto"> ${{ home.hello }}$ </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> ${{ home.rasoolsHome }}$ </div>
       </a>
       <a href="../vcard" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="briefcase" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
-        <div class="font-medium text-center text-base mt-3"> کارت ویزیت </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> کارت ویزیت ازم می‌خواین؟ دوره کاغذیش گذشته. </div>
+        <div class="font-medium text-center text-base mt-3"> ${{ menu.vcard }}$ </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> ${{ home.vcard }}$ </div>
       </a>
       <a href="abilities.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="zap" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
-        <div class="font-medium text-center text-base mt-3"> توانایی‌ها </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> خب من کارای مختلفی ازم برمیاد که میتونین بهم بسپرین. </div>
+        <div class="font-medium text-center text-base mt-3"> ${{ menu.abilities }}$ </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> ${{ home.abilities }}$ </div>
       </a>
       <a href="collaboration.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="target" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
-        <div class="font-medium text-center text-base mt-3"> همکاری </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> شاید بتونیم با هم تیم شیم! </div>
+        <div class="font-medium text-center text-base mt-3"> ${{ menu.collaboration }}$ </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> ${{ home.collaboration }}$ </div>
       </a>
       <a href="resume.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="file-text" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
-        <div class="font-medium text-center text-base mt-3"> رزومه </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> می‌خواین استخدامم کنین؟ رزومم رو ببینین. </div>
+        <div class="font-medium text-center text-base mt-3"> ${{ menu.resume }}$ </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> ${{ home.resume }}$ </div>
       </a>
       <a href="courses.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="shopping-bag" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
-        <div class="font-medium text-center text-base mt-3"> دوره‌ها </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> ببین! آموزش ببین! اونم یه آموزش ارزشمند! تا ارزشمندتر شی! </div>
+        <div class="font-medium text-center text-base mt-3"> ${{ menu.courses }}$ </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> ${{ home.courses }}$ </div>
       </a>
-      <a href="?#googtrans(en)" class="intro-y col-span-12 box py-10">
+      <a href="${{home.langSwitchLink}}$" class="intro-y col-span-12 box py-10">
         <i data-feather="globe" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
-        <div class="font-medium text-center text-base mt-3"> Translate </div>
-        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto">would you like to see me in other languages?</div>
+        <div class="font-medium text-center text-base mt-3"> ${{ menu.langSwitcherBtn }}$ </div>
+        <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto"> ${{ home.langRecommender }}$ </div>
       </a>
       <!-- END: FAQ Menu -->
     </div>

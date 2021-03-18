@@ -1,3 +1,10 @@
 define({
-    langSwitcherBtn: 'English'
+    langSwitcherBtn: 'English',
+    home:"خونه",
+    rasoolsHome:"خونه رسول",
+    vcard:"کارت ویزیت",
+    abilities :"توانایی‌ها",
+    collaboration:"همکاری",
+    resume:"رزومه",
+    courses:"دوره‌ها",
   });

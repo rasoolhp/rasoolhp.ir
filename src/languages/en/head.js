@@ -1,3 +1,3 @@
 define({
-  title: 'Rasool HP'
+  title: 'RasoolHP'
 });

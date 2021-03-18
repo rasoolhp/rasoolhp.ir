@@ -2,6 +2,7 @@
 <html class="dark">
 
 <head>
+  <title>${{ head.title }}$ - ${{menu.vcard}}$</title>
   @@include('../templates/head.html')
 </head>
 
@@ -13,7 +14,8 @@
   <div class="content">
 
     <!-- BEGIN: Breadcrumb -->
-    <div class="-intro-x breadcrumb breadcrumb--dark justify-center mt-5 md:hidden"> <a href="index.html" class="">خونه</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a class="breadcrumb--active">کارت ویزیت</a> </div>
+    <div class="-intro-x breadcrumb breadcrumb--dark justify-center mt-5 md:hidden"> <a href="../home" class="">${{menu.home}}$</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a class="breadcrumb--active">${{menu.vcard}}$</a>
+    </div>
     <!-- END: Breadcrumb -->
 
     <!-- BEGIN: Profile Info -->
@@ -24,8 +26,8 @@
             <img alt="RasoolHP" class="rounded-full" src="../dist/images/rasools/rasoolod.jpg">
           </div>
           <div class="ml-5">
-            <div class="w-30 sm:whitespace-normal font-bold text-lg truncate">رسول حسین پور</div>
-            <div class="text-gray-600">توسعه دهنده وب اپ</div>
+            <div class="w-30 sm:whitespace-normal font-bold text-lg truncate">${{head.title}}$</div>
+            <div class="text-gray-600">${{vcard.title}}$</div>
           </div>
         </div>
         <div class="flex mt-6 lg:mt-0 items-start flex-1 flex-col text-gray-600 dark:text-gray-300 px-5 border-l border-r border-gray-200 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
