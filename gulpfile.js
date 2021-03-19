@@ -48,6 +48,9 @@ gulp.task('copyAssets', function() {
   gulp.src(['./src/index.html'])
     .pipe(gulp.dest(paths.scripts.dest));
 
+  gulp.src(['./src/_config.yml'])
+    .pipe(gulp.dest(paths.scripts.dest));
+
   return gulp.src(['./src/CNAME'])
     .pipe(gulp.dest(paths.scripts.dest));
 });
@@ -81,7 +84,8 @@ gulp.task('afterLocalize', function() {
     '!docs/fa',
     '!docs/CNAME',
     '!docs/index.html',
-    '!docs/404.html'
+    '!docs/404.html',
+    '!docs/_config.yml'
   ]);
 });
 
