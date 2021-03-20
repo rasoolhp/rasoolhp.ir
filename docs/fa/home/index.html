@@ -56,37 +56,37 @@
   </div>
   <ul class="border-t border-theme-24 py-5 hidden">
     <li>
-      <a href="../home" class="menu">
+      <a href="../home/" class="menu">
         <div class="menu__icon"> <i data-feather="home"></i> </div>
         <div class="menu__title"> خونه رسول </div>
       </a>
     </li>
     <li>
-      <a href="../vcard" class="menu">
+      <a href="c" class="menu">
         <div class="menu__icon"> <i data-feather="briefcase"></i> </div>
         <div class="menu__title"> کارت ویزیت </div>
       </a>
     </li>
     <li>
-      <a href="abilities.html" class="menu">
+      <a href="../abilities/" class="menu">
         <div class="menu__icon"> <i data-feather="zap"></i> </div>
         <div class="menu__title"> توانایی‌ها </div>
       </a>
     </li>
     <li>
-      <a href="collaboration.html" class="menu">
+      <a href="../collaboration/" class="menu">
         <div class="menu__icon"> <i data-feather="target"></i> </div>
         <div class="menu__title"> همکاری </div>
       </a>
     </li>
     <li>
-      <a href="resume.html" class="menu">
+      <a href="../resume/" class="menu">
         <div class="menu__icon"> <i data-feather="file-text"></i> </div>
         <div class="menu__title"> رزومه </div>
       </a>
     </li>
     <li>
-      <a href="courses.html" class="menu">
+      <a href="../courses/" class="menu">
         <div class="menu__icon"> <i data-feather="shopping-bag"></i> </div>
         <div class="menu__title"> دوره‌ها </div>
       </a>
@@ -104,37 +104,37 @@
 <nav class="top-nav">
   <ul id="top-nav-menu">
     <li>
-      <a href="../home" class="top-menu">
+      <a href="../home/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="home"></i> </div>
         <div class="top-menu__title"> خونه رسول </div>
       </a>
     </li>
     <li>
-      <a href="../vcard" class="top-menu">
+      <a href="../vcard/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="briefcase"></i> </div>
         <div class="top-menu__title"> کارت ویزیت </div>
       </a>
     </li>
     <li>
-      <a href="abilities.html" class="top-menu">
+      <a href="../abilities/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
         <div class="top-menu__title"> توانایی‌ها </div>
       </a>
     </li>
     <li>
-      <a href="collaboration.html" class="top-menu">
+      <a href="../collaboration/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="target"></i> </div>
         <div class="top-menu__title"> همکاری </div>
       </a>
     </li>
     <li>
-      <a href="resume.html" class="top-menu">
+      <a href="../resume/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="file-text"></i> </div>
         <div class="top-menu__title"> رزومه </div>
       </a>
     </li>
     <li>
-      <a href="courses.html" class="top-menu">
+      <a href="../courses/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="shopping-bag"></i> </div>
         <div class="top-menu__title"> دوره‌ها </div>
       </a>
@@ -157,17 +157,17 @@
 <!-- select active menu for desktop -->
 <script>
   // top-menu--active
-  // console.log(document.location);
+  console.log(document.location);
   // console.log(document.location.protocol);
   loc_arr = String(document.location).split('/')
   las_loc = loc_arr[loc_arr.length - 2]
-  // console.log('las_loc', las_loc);
+  console.log('las_loc', las_loc);
   lis = document.getElementById('top-nav-menu').children
   for (var i = 0; i < lis.length; i++) {
     a_tag = lis[i].firstElementChild
     a_arr = a_tag.href.split('/')
-    // console.log('menu link', a_arr[a_arr.length - 1]);
-    if (a_arr[a_arr.length - 1] == las_loc) {
+    console.log('menu link', a_arr[a_arr.length - 2]);
+    if (a_arr[a_arr.length - 2] == las_loc) {
       a_tag.className += ' top-menu--active'
     } else if (las_loc == "" && a_arr[a_arr.length - 1] == "../home") {
       a_tag.className += ' top-menu--active'
@@ -204,27 +204,27 @@
         <div class="font-medium text-center text-base mt-3" dir="auto"> سلام به شما :) </div>
         <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> به خونه‌ی من خوش اومدین :) </div>
       </a>
-      <a href="../vcard" class="intro-y col-span-12 lg:col-span-4 box py-10">
+      <a href="../vcard/" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="briefcase" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> کارت ویزیت </div>
         <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> کارت ویزیت ازم می‌خواین؟ دوره کاغذیش گذشته. </div>
       </a>
-      <a href="abilities.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
+      <a href="../abilities/" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="zap" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> توانایی‌ها </div>
         <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> خب من کارای مختلفی ازم برمیاد که میتونین بهم بسپرین. </div>
       </a>
-      <a href="collaboration.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
+      <a href="../collaboration/" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="target" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> همکاری </div>
         <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> شاید بتونیم با هم تیم شیم! </div>
       </a>
-      <a href="resume.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
+      <a href="../resume/" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="file-text" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> رزومه </div>
         <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> می‌خواین استخدامم کنین؟ رزومم رو ببینین. </div>
       </a>
-      <a href="courses.html" class="intro-y col-span-12 lg:col-span-4 box py-10">
+      <a href="../courses/" class="intro-y col-span-12 lg:col-span-4 box py-10">
         <i data-feather="shopping-bag" class="w-12 h-12 text-theme-1 dark:text-theme-10 mx-auto"></i>
         <div class="font-medium text-center text-base mt-3"> دوره‌ها </div>
         <div class="text-gray-600 mt-2 w-3/4 text-center mx-auto" dir="auto"> ببین! آموزش ببین! اونم یه آموزش ارزشمند! تا ارزشمندتر شی! </div>

@@ -11,37 +11,37 @@
   </div>
   <ul class="border-t border-theme-24 py-5 hidden">
     <li>
-      <a href="../home" class="menu">
+      <a href="../home/" class="menu">
         <div class="menu__icon"> <i data-feather="home"></i> </div>
         <div class="menu__title"> ${{ menu.rasoolsHome }}$ </div>
       </a>
     </li>
     <li>
-      <a href="../vcard" class="menu">
+      <a href="c" class="menu">
         <div class="menu__icon"> <i data-feather="briefcase"></i> </div>
         <div class="menu__title"> ${{ menu.vcard }}$ </div>
       </a>
     </li>
     <li>
-      <a href="abilities.html" class="menu">
+      <a href="../abilities/" class="menu">
         <div class="menu__icon"> <i data-feather="zap"></i> </div>
         <div class="menu__title"> ${{ menu.abilities }}$ </div>
       </a>
     </li>
     <li>
-      <a href="collaboration.html" class="menu">
+      <a href="../collaboration/" class="menu">
         <div class="menu__icon"> <i data-feather="target"></i> </div>
         <div class="menu__title"> ${{ menu.collaboration }}$ </div>
       </a>
     </li>
     <li>
-      <a href="resume.html" class="menu">
+      <a href="../resume/" class="menu">
         <div class="menu__icon"> <i data-feather="file-text"></i> </div>
         <div class="menu__title"> ${{ menu.resume }}$ </div>
       </a>
     </li>
     <li>
-      <a href="courses.html" class="menu">
+      <a href="../courses/" class="menu">
         <div class="menu__icon"> <i data-feather="shopping-bag"></i> </div>
         <div class="menu__title"> ${{ menu.courses }}$ </div>
       </a>
@@ -59,37 +59,37 @@
 <nav class="top-nav">
   <ul id="top-nav-menu">
     <li>
-      <a href="../home" class="top-menu">
+      <a href="../home/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="home"></i> </div>
         <div class="top-menu__title"> ${{ menu.rasoolsHome }}$ </div>
       </a>
     </li>
     <li>
-      <a href="../vcard" class="top-menu">
+      <a href="../vcard/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="briefcase"></i> </div>
         <div class="top-menu__title"> ${{ menu.vcard }}$ </div>
       </a>
     </li>
     <li>
-      <a href="abilities.html" class="top-menu">
+      <a href="../abilities/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
         <div class="top-menu__title"> ${{ menu.abilities }}$ </div>
       </a>
     </li>
     <li>
-      <a href="collaboration.html" class="top-menu">
+      <a href="../collaboration/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="target"></i> </div>
         <div class="top-menu__title"> ${{ menu.collaboration }}$ </div>
       </a>
     </li>
     <li>
-      <a href="resume.html" class="top-menu">
+      <a href="../resume/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="file-text"></i> </div>
         <div class="top-menu__title"> ${{ menu.resume }}$ </div>
       </a>
     </li>
     <li>
-      <a href="courses.html" class="top-menu">
+      <a href="../courses/" class="top-menu">
         <div class="top-menu__icon"> <i data-feather="shopping-bag"></i> </div>
         <div class="top-menu__title"> ${{ menu.courses }}$ </div>
       </a>
@@ -112,17 +112,17 @@
 <!-- select active menu for desktop -->
 <script>
   // top-menu--active
-  // console.log(document.location);
+  console.log(document.location);
   // console.log(document.location.protocol);
   loc_arr = String(document.location).split('/')
   las_loc = loc_arr[loc_arr.length - 2]
-  // console.log('las_loc', las_loc);
+  console.log('las_loc', las_loc);
   lis = document.getElementById('top-nav-menu').children
   for (var i = 0; i < lis.length; i++) {
     a_tag = lis[i].firstElementChild
     a_arr = a_tag.href.split('/')
-    // console.log('menu link', a_arr[a_arr.length - 1]);
-    if (a_arr[a_arr.length - 1] == las_loc) {
+    console.log('menu link', a_arr[a_arr.length - 2]);
+    if (a_arr[a_arr.length - 2] == las_loc) {
       a_tag.className += ' top-menu--active'
     } else if (las_loc == "" && a_arr[a_arr.length - 1] == "../home") {
       a_tag.className += ' top-menu--active'
