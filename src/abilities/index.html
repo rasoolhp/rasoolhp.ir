@@ -10,19 +10,107 @@
 
   @@include('../templates/menu.html')
 
+
   <!-- BEGIN: Content -->
   <div class="content">
-
     <!-- BEGIN: Breadcrumb -->
     <div class="-intro-x breadcrumb breadcrumb--dark justify-center mt-5 md:hidden"> <a href="../home" class="">${{menu.home}}$</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a class="breadcrumb--active">${{menu.abilities}}$</a>
     </div>
     <!-- END: Breadcrumb -->
 
+    <div class="intro-y news p-5 box mt-8">
+      <!-- BEGIN -->
+      <h2 class="intro-y font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ abilities.webSiteandWebApp }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ abilities.webSiteandWebAppDesc }}$
+      </div>
+      <div class="mx-6 pb-8 mt-5">
+        <div class="fade-mode">
+          <div class="px-2">
+            <div class="flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/1.jpg" data-action="zoom" /> </div>
+          </div>
+          <div class="px-2">
+            <div class="flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/2.jpg" data-action="zoom" /> </div>
+          </div>
+          <div class="px-2">
+            <div class="flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/3.jpg" data-action="zoom" /> </div>
+          </div>
+          <div class="px-2">
+            <div class="flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/4.jpg" data-action="zoom" /> </div>
+          </div>
+          <div class="px-2">
+            <div class="flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/5.jpg" data-action="zoom" /> </div>
+          </div>
+          <div class="px-2">
+            <div class="flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/6.jpg" data-action="zoom" /> </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ abilities.roboticsAndElectronics }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ abilities.roboticsAndElectronicsDesc }}$
+      </div>
+      <div class="mt-5 flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/robots.jpg" data-action="zoom" width="640px" /> </div>
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ abilities.bot }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ abilities.botDesc }}$
+      </div>
+      <div class="mt-5 flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/bot.png" data-action="zoom" width="640px" /> </div>
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ abilities.logo }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ abilities.logoDesc }}$
+      </div>
+      <div class="mt-5 flex justify-center h-full rounded-md overflow-hidden"> <img alt="${{ abilities.portfolioAlt }}$" src="../dist/images/portfolio/nata.jpg" data-action="zoom" width="640px" /> </div>
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ abilities.programming }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ abilities.programmingDesc }}$
+        </br>
+        ${{ abilities.backend }}$
+        </br>
+        ${{ abilities.frontend }}$
+        </br>
+        ${{ abilities.robotics }}$
+      </div>
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ abilities.language }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ abilities.languageDesc }}$
+      </div>
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ abilities.more }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ abilities.moreDesc }}$
+      </div>
+
+      <a href="../vcard/">
+        <button class="intro-x w-full button button--lg border border border-blue-600 text-blue-600 border-solid dark:border-dark-5 dark:text-gray-300 mt-10">${{ menu.vcard }}$</button>
+      </a>
+
+      <!-- END -->
+    </div>
   </div>
   <!-- END: Content -->
   <!-- BEGIN: JS Assets-->
-  <script src="../dist/js/app.js"> </script>
-  @@include('../templates/js.html')
+  <script src="
+          ../dist/js/app.js"> </script> @@include('../templates/js.html')
   <!-- END: JS Assets-->
 </body>
 
