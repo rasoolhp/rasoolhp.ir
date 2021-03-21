@@ -8,4 +8,5 @@ define({
     courses:"Hey look at me! Learn! Become valuable!",
     langRecommender:"می‌خوای این صفحه رو به زبان فارسی ببینی؟ این گزینه رو بزن",
     langSwitchLink:"/fa/home/",
+    pay:"To pay me in Rials, use this link.",
   });

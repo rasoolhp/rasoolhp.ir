@@ -7,4 +7,5 @@ define({
     collaboration:"همکاری",
     resume:"رزومه",
     courses:"دوره‌ها",
+    pay:"پرداخت",
   });

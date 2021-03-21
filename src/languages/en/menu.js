@@ -7,4 +7,5 @@ define({
   collaboration:"Collaboration",
   resume:"CV",
   courses:"Courses",
+  pay:"Pay",
 });
