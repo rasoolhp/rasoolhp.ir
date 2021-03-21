@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+  <title>RasoolHP - Business Card</title>
+  <!-- BEGIN: Default Head -->
+
+<meta charset="utf-8">
+<link href="../dist/images/logo.svg" rel="shortcut icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1c3faa" />
+<meta name="description" content="سایت رسول حسین پور">
+<meta name="keywords" content="رسول حسین پور">
+<meta name="author" content="رسول حسین پور">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="../dist/images/rasools/rasoolin.jpg" />
+<title>RasoolHP</title>
+
+
+<!-- BEGIN: CSS Assets-->
+<link rel="stylesheet" href="../dist/css/app.css" />
+<!-- END: CSS Assets-->
+
+<!-- END: Default Head -->
+
+<!-- Initial set style mode -->
+<script src="../dist/js/cookies.js"></script>
+<script>
+  styleMode = document.getElementsByTagName("html")[0];
+
+  if (getCookie("style_mode") == "light") {
+    styleMode.className = 'light';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c3faa');
+  } else if (getCookie("style_mode") == "dark") {
+    styleMode.className = 'dark';
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#232a3b');
+  } else {
+    styleMode.className = 'light';
+    setCookieForever("style_mode", "light")
+  }
+</script>
+</head>
+
+<body class="app">
+<!-- trace:docs/abilities/index.html -->
+
+  <!-- BEGIN: Mobile Menu -->
+<div class="mobile-menu md:hidden">
+  <div class="mobile-menu-bar">
+    <a href="javascript:toggleStyleMode();" id='mobile-style-mode-link'>
+      <i data-feather="sun" id="mobile-style-mode-icon" class="w-6 h-6 text-white"></i>
+    </a>
+    <a href="../home" class="flex m-auto">
+      <span class="xl:block text-white text-lg">RasoolHP</span>
+    </a>
+    <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+  </div>
+  <ul class="border-t border-theme-24 py-5 hidden">
+    <li>
+      <a href="../home/" class="menu">
+        <div class="menu__icon"> <i data-feather="home"></i> </div>
+        <div class="menu__title"> Rasool's Home </div>
+      </a>
+    </li>
+    <li>
+      <a href="c" class="menu">
+        <div class="menu__icon"> <i data-feather="briefcase"></i> </div>
+        <div class="menu__title"> Business Card </div>
+      </a>
+    </li>
+    <li>
+      <a href="../abilities/" class="menu">
+        <div class="menu__icon"> <i data-feather="zap"></i> </div>
+        <div class="menu__title"> Abilities </div>
+      </a>
+    </li>
+    <li>
+      <a href="../collaboration/" class="menu">
+        <div class="menu__icon"> <i data-feather="target"></i> </div>
+        <div class="menu__title"> Collaboration </div>
+      </a>
+    </li>
+    <li>
+      <a href="../resume/" class="menu">
+        <div class="menu__icon"> <i data-feather="file-text"></i> </div>
+        <div class="menu__title"> CV </div>
+      </a>
+    </li>
+    <li>
+      <a href="../courses/" class="menu">
+        <div class="menu__icon"> <i data-feather="shopping-bag"></i> </div>
+        <div class="menu__title"> Courses </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://zarinp.al/rasoolhp" class="menu">
+        <div class="menu__icon"> <i data-feather="credit-card"></i> </div>
+        <div class="menu__title"> Pay </div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:langSwitcher()" class="menu">
+        <div class="menu__icon"> <i data-feather="globe"></i> </div>
+        <div class="menu__title"> فارسی </div>
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- END: Mobile Menu -->
+<!-- BEGIN: Top Menu -->
+<nav class="top-nav">
+  <ul id="top-nav-menu">
+    <li>
+      <a href="../home/" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="home"></i> </div>
+        <div class="top-menu__title"> Rasool's Home </div>
+      </a>
+    </li>
+    <li>
+      <a href="../vcard/" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="briefcase"></i> </div>
+        <div class="top-menu__title"> Business Card </div>
+      </a>
+    </li>
+    <li>
+      <a href="../abilities/" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="zap"></i> </div>
+        <div class="top-menu__title"> Abilities </div>
+      </a>
+    </li>
+    <li>
+      <a href="../collaboration/" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="target"></i> </div>
+        <div class="top-menu__title"> Collaboration </div>
+      </a>
+    </li>
+    <li>
+      <a href="../resume/" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="file-text"></i> </div>
+        <div class="top-menu__title"> CV </div>
+      </a>
+    </li>
+    <li>
+      <a href="../courses/" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="shopping-bag"></i> </div>
+        <div class="top-menu__title"> Courses </div>
+      </a>
+    </li>
+    <li>
+      <a href="https://zarinp.al/rasoolhp" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="credit-card"></i> </div>
+        <div class="top-menu__title"> Pay </div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:langSwitcher()" class="top-menu">
+        <div class="top-menu__icon"> <i data-feather="globe"></i> </div>
+        <div class="top-menu__title"> فارسی </div>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:toggleStyleMode()" class="top-menu" id='desktop-style-mode-link'>
+        <div class="top-menu__icon"> <i data-feather="sun" id="desktop-style-mode-icon"></i> </div>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- END: Top Menu -->
+
+<!-- select active menu for desktop -->
+<script>
+  // top-menu--active
+  console.log(document.location);
+  // console.log(document.location.protocol);
+  loc_arr = String(document.location).split('/')
+  las_loc = loc_arr[loc_arr.length - 2]
+  console.log('las_loc', las_loc);
+  lis = document.getElementById('top-nav-menu').children
+  for (var i = 0; i < lis.length; i++) {
+    a_tag = lis[i].firstElementChild
+    a_arr = a_tag.href.split('/')
+    console.log('menu link', a_arr[a_arr.length - 2]);
+    if (a_arr[a_arr.length - 2] == las_loc) {
+      a_tag.className += ' top-menu--active'
+    } else if (las_loc == "" && a_arr[a_arr.length - 1] == "../home") {
+      a_tag.className += ' top-menu--active'
+    }
+  }
+</script>
+
+
+<!-- langSwitcher -->
+<script>
+  function langSwitcher() {
+    thisPageLoc = String(document.location)
+    // console.log(thisPageLoc);
+    if (thisPageLoc.includes("/en/")) {
+      // console.log('en', thisPageLoc.replace("/en/", "/fa/"));
+      window.location.replace(thisPageLoc.replace("/en/", "/fa/"))
+    } else if (thisPageLoc.includes("/fa/")) {
+      // console.log('fa', thisPageLoc.replace("/fa/", "/en/"));
+      window.location.replace(thisPageLoc.replace("/fa/", "/en/"))
+    }
+  }
+</script>
+
+  <!-- BEGIN: Content -->
+  <div class="content">
+
+    <!-- BEGIN: Breadcrumb -->
+    <div class="-intro-x breadcrumb breadcrumb--dark justify-center mt-5 md:hidden"> <a href="../home" class="">Home</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a class="breadcrumb--active">Abilities</a>
+    </div>
+    <!-- END: Breadcrumb -->
+
+  </div>
+  <!-- END: Content -->
+  <!-- BEGIN: JS Assets-->
+  <script src="../dist/js/app.js"> </script>
+  <!-- dark and light mode switcher -->
+<script>
+  var clicked = false;
+
+  function toggleStyleMode() {
+    if (!clicked) {
+      clicked = true;
+      document.getElementById("mobile-style-mode-link").removeAttribute('href');
+      document.getElementById("desktop-style-mode-link").removeAttribute('href');
+      // console.log('disabled!');
+      setTimeout(function() {
+        clicked = false;
+        document.getElementById("mobile-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        document.getElementById("desktop-style-mode-link").setAttribute('href', 'javascript:toggleStyleMode()');
+        // console.log('enabled.');
+      }, 100);
+    }
+
+    styleModeCookie = getCookie("style_mode")
+    // console.log('cookie:', styleModeCookie);
+    if (styleModeCookie == "light") {
+      styleMode.className = 'dark';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#232a3b');
+      setCookieForever("style_mode", "dark")
+      // console.log('Dark Mode');
+    } else if (styleModeCookie == "dark") {
+      styleMode.className = 'light';
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1c3faa');
+      setCookieForever("style_mode", "light")
+      // console.log('Light Mode');
+    }
+    feather.replace()
+  }
+</script>
+  <!-- END: JS Assets-->
+</body>
+
+</html>

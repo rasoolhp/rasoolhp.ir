@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+  <title>${{ head.title }}$ - ${{menu.vcard}}$</title>
+  @@include('../templates/head.html')
+</head>
+
+<body class="app">
+
+  @@include('../templates/menu.html')
+
+  <!-- BEGIN: Content -->
+  <div class="content">
+
+    <!-- BEGIN: Breadcrumb -->
+    <div class="-intro-x breadcrumb breadcrumb--dark justify-center mt-5 md:hidden"> <a href="../home" class="">${{menu.home}}$</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a class="breadcrumb--active">${{menu.abilities}}$</a>
+    </div>
+    <!-- END: Breadcrumb -->
+
+  </div>
+  <!-- END: Content -->
+  <!-- BEGIN: JS Assets-->
+  <script src="../dist/js/app.js"> </script>
+  @@include('../templates/js.html')
+  <!-- END: JS Assets-->
+</body>
+
+</html>
