@@ -1,7 +1,20 @@
 define({
     portfolioAlt: 'RasoolHP portfolios',
   webSiteandWebApp:'WebSite and WebApp',
-
+  webSiteandWebAppDesc:"I can develop websites and web apps for you :) I'm talented and experienced in this field. And also I have SEO knowledge (search engine optimization) and of course the Responsive design. You can see some of my portfolios here.",
   roboticsAndElectronics:"Robotics and Electronics",
-
+  roboticsAndElectronicsDesc:"Aw! I worked in robotics and electronics and embedded systems fields and also IoT.",
+  bot:"Telegram bot and Whatsapp bot",
+  botDesc:"If you need a service on telegram or Whatsapp platform, I can do it for you.",
+  logo:"Logo designing :)",
+  logoDesc:"I can do it but I don't do it a lot! anyway, this one of my portfolio for the Nata brand.",
+  programming:"Also in programming field",
+  programmingDesc:"From low scale to big scale projects",
+  backend:"Server-side or backend (Python/Django, NodeJS/express)",
+  frontend:"Client-side or frontend (HTML,CSS,JS)",
+  robotics:"Embedded systems (C, C++)",
+  language:"Second language",
+  languageDesc:"My mother-tongue language is Persian (Farsi) and my second language is English. I'm at the intermediate level right now. and in can communicate with English speakers and also read technical articles. Of course, I'm learning English every day!",
+  more:"Other little skills",
+  moreDesc:"Ok. I can do some other things that we need in projects. like Video edition or UI/UX domains... For request a project or a tutorial or talk with me, you can see the business card part",
   });

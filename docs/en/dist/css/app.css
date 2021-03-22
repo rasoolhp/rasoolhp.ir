@@ -20873,6 +20873,23 @@ video {
   height: 16rem;
 }
 
+@media all and (orientation:portrait) {
+	.h-slider{
+		/* display:block; */
+		height: 30vw;
+		object-fit: contain;
+	}
+}
+
+@media all and (orientation:landscape) {
+	.h-slider{
+		/* display:block; */
+		height: 80vh;
+		object-fit: contain;
+	}
+}
+
+
 .h-auto{
   height: auto;
 }
