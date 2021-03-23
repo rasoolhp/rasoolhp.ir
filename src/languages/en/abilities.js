@@ -1,5 +1,6 @@
 define({
-    portfolioAlt: 'RasoolHP portfolios',
+  canonical:"https://rasoolhp.ir/fa/abilities/",
+  portfolioAlt: 'RasoolHP portfolios',
   webSiteandWebApp:'WebSite and WebApp',
   webSiteandWebAppDesc:"I can develop websites and web apps for you :) I'm talented and experienced in this field. And also I have SEO knowledge (search engine optimization) and of course the Responsive design. You can see some of my portfolios here.",
   roboticsAndElectronics:"Robotics and Electronics",
