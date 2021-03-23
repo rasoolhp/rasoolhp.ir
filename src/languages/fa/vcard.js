@@ -1,3 +1,4 @@
 define({
-    title: 'توسعه دهنده وب اپ'
+  canonical:"https://rasoolhp.ir/fa/vcard/",
+  title: 'توسعه دهنده وب اپ'
   });
