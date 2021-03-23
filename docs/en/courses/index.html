@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="${{ defaults.theme }}$">
+<html class="*defaults.theme*">
 
 <head>
   <title>RasoolHP - Courses</title>
@@ -50,12 +50,19 @@
   <!-- BEGIN: Mobile Menu -->
 <div class="mobile-menu md:hidden">
   <div class="mobile-menu-bar">
-    <a href="javascript:toggleStyleMode();" id='mobile-style-mode-link'>
+    <!-- <a href="javascript:toggleStyleMode();" id='mobile-style-mode-link'>
       <i data-feather="sun" id="mobile-style-mode-icon" class="w-6 h-6 text-white"></i>
+    </a> -->
+
+    <a href="javascript:langSwitcher()" class="text-white">
+      <i data-feather="globe"></i>
+      <!-- فارسی -->
     </a>
-    <a href="../home" class="flex m-auto">
+
+    <a href="../home/" class="flex m-auto">
       <span class="xl:block text-white text-lg">RasoolHP</span>
     </a>
+
     <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
   </div>
   <ul class="border-t border-theme-24 py-5 hidden">
@@ -101,10 +108,15 @@
         <div class="menu__title"> Pay </div>
       </a>
     </li>
-    <li>
+    <!-- <li>
       <a href="javascript:langSwitcher()" class="menu">
         <div class="menu__icon"> <i data-feather="globe"></i> </div>
         <div class="menu__title"> فارسی </div>
+      </a>
+    </li> -->
+    <li>
+      <a href="javascript:toggleStyleMode()" class="menu" id='mobile-style-mode-link'>
+        <div class="menu__icon"> <i data-feather="sun"></i> </div>
       </a>
     </li>
   </ul>
