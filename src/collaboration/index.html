@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+  <title>${{ head.title }}$ - ${{menu.collaboration}}$</title>
+  <link rel="canonical" href="${{ collaboration.canonical }}$">
+  <link rel="alternate" href="https://rasoolhp.ir/en/collaboration/" hreflang="en" />
+  <link rel="alternate" href="https://rasoolhp.ir/fa/collaboration/" hreflang="fa" />
+  @@include('../templates/head.html')
+</head>
+
+<body class="app">
+
+  @@include('../templates/menu.html')
+
+
+  <!-- BEGIN: Content -->
+  <div class="content">
+
+    <!-- BEGIN: Breadcrumb -->
+    <div class="-intro-x breadcrumb breadcrumb--dark justify-center mt-5 md:hidden"> <a href="../collaboration/" class="">${{menu.home}}$</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a class="breadcrumb--active">${{menu.collaboration}}$</a>
+    </div>
+    <!-- END: Breadcrumb -->
+
+    <!-- BEGIN -->
+    <div class="intro-y box px-5 pt-5 mt-5 pb-5">
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ collaboration.ways }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ collaboration.hourly }}$
+      </div>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ collaboration.project }}$
+      </div>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ collaboration.consulting }}$
+      </div>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ collaboration.monitoring }}$
+      </div>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ collaboration.startup }}$
+      </div>
+
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ collaboration.abilitiesDesc }}$
+      </div>
+      <a target="_blank" href="../abilities/">
+        <button class="intro-x w-1/2 flex justify-center text-center mx-auto button button--lg border border border-blue-600 text-blue-600 border-solid dark:border-dark-5 dark:text-gray-300 mt-5">${{ menu.abilities }}$</button>
+      </a>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ collaboration.vcardDesc }}$
+      </div>
+      <a target="_blank" href="../vcard/">
+        <button class="intro-x w-1/2 flex justify-center text-center mx-auto button button--lg border border border-blue-600 text-blue-600 border-solid dark:border-dark-5 dark:text-gray-300 mt-5">${{ menu.vcard }}$</button>
+      </a>
+    </div>
+    <!-- END -->
+  </div>
+  <!-- END: Content -->
+  <!-- BEGIN: JS Assets-->
+  <script src="
+          ../dist/js/app.js"> </script> @@include('../templates/js.html')
+  <!-- END: JS Assets-->
+</body>
+
+</html>
