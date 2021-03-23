@@ -1,0 +1,17 @@
+define({
+    canonical:"https://rasoolhp.ir/en/courses/",
+    deal:"Let's deal!",
+    dealDesc:"Watch 3 min of a quarter of this video. If you watch it to entire the end of the video, You interested in programming. (Video is in Persian!)",
+    free:"Free  Persian Videos Channel",
+    freeDesc:"On this channel, you can watch hundreds of my Persian tutorial videos. and know me more.",
+    aparat:"Aparat channel",
+    wolvesPack:"Do you want a full course?",
+    wolvesPackDesc:"It just walks 100 tiny steps! This is Free too and if you are a good learner, you can set up your first site with your hands and your mind! Very quick became a hero from zero.",
+    wolvesPackDesc2:"And this is the first video of the course. For taste it!",
+    wolvesPackDesc3:"And here we have the course links:",
+    first50:"Playlist one - Frist 50 walks",
+    second50:"Playlist two - Second 50 walks",
+    private:"Private classes",
+    privateDesc:"I'm ready to teach you everything that I have in my specialty. If you want to know about my abilities, see this page:",
+    privateDesc2:"If you want to set a class schedule, or ask questions about your class, please contact me.",
+    });

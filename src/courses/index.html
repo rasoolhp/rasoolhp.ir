@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="dark">
+
+<head>
+  <title>${{ head.title }}$ - ${{menu.courses}}$</title>
+  <link rel="canonical" href="${{ courses.canonical }}$">
+  <link rel="alternate" href="https://rasoolhp.ir/en/courses/" hreflang="en" />
+  <link rel="alternate" href="https://rasoolhp.ir/fa/courses/" hreflang="fa" />
+  @@include('../templates/head.html')
+</head>
+
+<body class="app">
+
+  @@include('../templates/menu.html')
+
+  <!-- BEGIN: Content -->
+  <div class="content">
+
+    <!-- BEGIN: Breadcrumb -->
+    <div class="-intro-x breadcrumb breadcrumb--dark justify-center mt-5 md:hidden"> <a href="../courses/" class="">${{menu.home}}$</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a class="breadcrumb--active">${{menu.courses}}$</a>
+    </div>
+    <!-- END: Breadcrumb -->
+
+    <!-- BEGIN -->
+    <div class="intro-y box px-5 pt-5 mt-5 pb-5">
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ courses.deal }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ courses.dealDesc }}$
+      </div>
+      <!-- Aparat -->
+      <style>
+        .h_iframe-aparat_embed_frame {
+          position: relative;
+        }
+
+        .h_iframe-aparat_embed_frame .ratio {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .h_iframe-aparat_embed_frame iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      </style>
+      <div class="h_iframe-aparat_embed_frame mt-5 lg:w-1/2  mx-auto"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/nME7a/vt/frame?&recom=none" title="چگونه مخ پایتون را بزنیم و با پایتون ... (جلسه ۲ از ۳ - لاک پشت سواری با پایتون)"
+          allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>
+      <!-- Aparat -->
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ courses.wolvesPack }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ courses.wolvesPackDesc }}$
+      </div>
+
+      <div class="h_iframe-aparat_embed_frame mt-5 lg:w-1/2  mx-auto"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/BlcuL/vt/frame?&recom=none" title="رسول حسین پور - فصل ۱ پک گرگ ها - سایت فروشگاهی"
+          allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>
+
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ courses.wolvesPackDesc2 }}$
+      </div>
+      <div class="h_iframe-aparat_embed_frame mt-5 lg:w-1/2  mx-auto"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/Kole8/vt/frame?&recom=none" title="بالا آوردن سایت وردپرسی در یک دقیقه و نیم با لیارا - میگ میگ"
+          allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>
+
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ courses.wolvesPackDesc3 }}$
+      </div>
+      </br>
+      <a target="_blank" href="https://www.aparat.com/v/Kole8?playlist=358227" class="flex text-blue-600 text-center justify-center">
+        ${{ courses.first50 }}$
+      </a>
+      </br>
+      <a target="_blank" href="https://www.aparat.com/v/XmHS7?playlist=373902" class="flex text-blue-600 text-center justify-center">
+        ${{ courses.second50 }}$
+      </a>
+      </br>
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ courses.free }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ courses.freeDesc }}$
+      </div>
+      <a target="_blank" href="https://www.aparat.com/slash_startup">
+        <button class="intro-x w-1/2 flex justify-center text-center mx-auto button button--lg border border border-blue-600 text-blue-600 border-solid dark:border-dark-5 dark:text-gray-300 mt-5">${{ courses.aparat }}$</button>
+      </a>
+
+      <h2 class="intro-y mt-10 font-medium text-xl sm:text-2xl lg:text-center" dir="auto">
+        ${{ courses.private }}$
+      </h2>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ courses.privateDesc }}$
+      </div>
+      <a target="_blank" href="../abilities/">
+        <button class="intro-x w-1/2 flex justify-center text-center mx-auto button button--lg border border border-blue-600 text-blue-600 border-solid dark:border-dark-5 dark:text-gray-300 mt-5">${{ menu.abilities }}$</button>
+      </a>
+      <div class="intro-y mt-2 text-justify lg:text-center" dir="auto">
+        ${{ courses.privateDesc2 }}$
+      </div>
+      <a target="_blank" href="../vcard/">
+        <button class="intro-x w-1/2 flex justify-center text-center mx-auto button button--lg border border border-blue-600 text-blue-600 border-solid dark:border-dark-5 dark:text-gray-300 mt-5">${{ menu.vcard }}$</button>
+      </a>
+    </div>
+    <!-- END -->
+  </div>
+  <!-- END: Content -->
+  <!-- BEGIN: JS Assets-->
+  <script src="../dist/js/app.js"> </script>
+  @@include('../templates/js.html')
+  <!-- END: JS Assets-->
+</body>
+
+</html>
