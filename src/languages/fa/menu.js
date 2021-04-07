@@ -8,5 +8,5 @@ define({
     resume:"رزومه",
     courses:"دوره‌ها",
     pay:"پرداخت",
-    capsule:"رسول کپسول!",
+    capsule:"کپسول رسول!",
   });
