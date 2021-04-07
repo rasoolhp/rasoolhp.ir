@@ -9,4 +9,5 @@ define({
     langRecommender:"would you like to see this page in English language?",
     langSwitchLink:"/en/home/",
     pay:"برای پرداخت مبالغ مختلف به من، از این لینک استفاده کنید.",
+    capsule:"یک خدمت فوق ویژه و لذت بخش!",
   });
