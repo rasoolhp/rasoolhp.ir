@@ -25,7 +25,7 @@ define({
     buy3:"Treat your pain with Rasool",
     call:"Call with Rasool",
     money:"What? you can't pay?",
-    sleep:"Sleeping?",
+    sleep:"Feel sleepy?",
     buy4:"A capsule can awake you!",
-    seat:"Don's seat and watch! Buy and enjoy.",
+    seat:"Don't seat and watch! Buy and enjoy.",
 });
