@@ -8,4 +8,5 @@ define({
   resume:"CV",
   courses:"Courses",
   pay:"Pay",
+  capsule:"Rasool's Capsule",
 });
